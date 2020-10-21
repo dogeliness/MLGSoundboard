@@ -1,0 +1,72 @@
+@font-face {
+    font-family: LemonMilk;
+    src: local('Lemon/Milk'),
+         url("../fonts/LemonMilk.otf") format("opentype");
+}
+body {
+    text-align: center;
+    transition: 1s linear;
+    background-color: red;
+    cursor: url(http://cur.cursors-4u.net/food/foo-7/foo638.cur), auto !important;
+}
+.keys {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.key {
+    display: block;
+    width: 25%;
+    height: 33vh;
+    float: left;
+    position: relative;
+}
+.key img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.key img:hover {
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    -o-animation: spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+.desc-holder {
+    height: 100%;
+}
+.desc-holder-text {
+    font-size: 20px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s linear;
+}
+.desc-holder-text h1 {
+    font-size: 40px;
+    font-family: LemonMilk;
+}
+@media screen and (max-width: 1100px) {
+    .key {
+        width: 33%;
+    }
+}
+}
